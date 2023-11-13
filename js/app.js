@@ -9,12 +9,16 @@ var MEU_ENDERECO = null;
 
 var VALOR_CARRINHO = 0;
 var VALOR_ENTREGA = 5;
-
 var CELULAR_EMPRESA = "5544999424823";
+var PERFIL_INSTAGRAM = "jeann.lucas_";
+var PERFIL_FACEBOOK = "jeann.lucas";
 
 cardapio.eventos = {
   init: () => {
     cardapio.metodos.obterItensCardapio();
+    cardapio.metodos.carregarBotaoLigar();
+    cardapio.metodos.carregaRedesSociaisBanner();
+    cardapio.metodos.carregaRedesSociaisFooter();
   },
 };
 
@@ -471,6 +475,59 @@ cardapio.metodos = {
         }
       });
     }
+  },
+
+  //carrega o link botão reserva.
+  carregarBotaoReserva: () => {
+    var texto = "Olá gostaria de fazer uma *reserva*";
+
+    let encode = encodeURI(texto);
+
+    // url do whatsapp
+    let URL = `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`;
+
+    $("#btnReserva").attr("href", URL);
+  },
+
+  // carrega o botão de ligar
+  carregarBotaoLigar: () => {
+    $("#btnLigar").attr("href", `tel:${CELULAR_EMPRESA}`);
+  },
+
+  // abre o depoimento
+  abrirDepoimento: (depoimento) => {
+    $("#depoimento-1").addClass("hidden");
+    $("#depoimento-2").addClass("hidden");
+    $("#depoimento-3").addClass("hidden");
+
+    $("#btnDepoimento-1").removeClass("active");
+    $("#btnDepoimento-2").removeClass("active");
+    $("#btnDepoimento-3").removeClass("active");
+
+    $("#depoimento-" + depoimento).removeClass("hidden");
+    $("#btnDepoimento-" + depoimento).addClass("active");
+  },
+
+  carregaRedesSociaisBanner: () => {
+    let INSTAGRAM = `https://www.instagram.com/${PERFIL_INSTAGRAM}`;
+    $("#btnInstagram").attr("href", INSTAGRAM);
+
+    let FACEBOOK = `https://www.facebook.com/${PERFIL_FACEBOOK}`;
+    $("#btnFacebook").attr("href", FACEBOOK);
+
+    let WHATSAPP = `https://wa.me/${CELULAR_EMPRESA}`;
+    $("#btnWhatsapp").attr("href", WHATSAPP);
+  },
+
+  carregaRedesSociaisFooter: () => {
+    let INSTAGRAM = `https://www.instagram.com/${PERFIL_INSTAGRAM}`;
+    $("#btnInstagramFooter").attr("href", INSTAGRAM);
+
+    let FACEBOOK = `https://www.facebook.com/${PERFIL_FACEBOOK}`;
+    $("#btnFacebookFooter").attr("href", FACEBOOK);
+
+    let WHATSAPP = `https://wa.me/${CELULAR_EMPRESA}`;
+    $("#btnWhatsappFooter").attr("href", WHATSAPP);
   },
 
   mensagem: (texto, cor = "red", tempo = 3500) => {

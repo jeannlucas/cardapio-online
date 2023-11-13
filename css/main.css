@@ -460,7 +460,7 @@ footer {
     width: 150px;
 }
 
-.container-logo-footer, .container-texto-footer, .container-redes-footer {
+.container-logo-footer, .container-texto-footer, .container-redes-footer{
     display: flex;
     align-items: center;
 }
@@ -476,6 +476,8 @@ footer {
 .container-redes-footer {
     justify-content: end;
 }
+
+
 
 .modal-full {
     position: fixed;

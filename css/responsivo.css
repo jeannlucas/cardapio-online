@@ -1,23 +1,20 @@
-/* Desktop  (col-lg) 992px */
 
+/* Desktop (col-lg) 992px+ */
 @media (min-width: 992px) {
 
 }
 
 /* Desktop e Tablets (col-md) 768px a 991px */
-
 @media (min-width: 768px) and (max-width: 991px) {
-    
+
 }
 
 /* Tablets (col-sm) 576px a 767px */
+@media (min-width: 576px) and (max-width: 767px) {
 
-@media (min-width: 992px) {
-    
 }
 
 /* Tablets e Celulares (col) 0px a 767px */
-
 @media (max-width: 767px) {
 
     .no-mobile {
@@ -34,7 +31,7 @@
     }
 
     .navbar-collapse {
-        background-color: var(--color-secondary) ;
+        background-color: var(--color-secondary);
         padding: 20px;
         text-align: center;
         border-radius: 40px;
@@ -70,13 +67,13 @@
         font-size: 18px;
     }
 
-    .btn-icon-left span.btn-icon-left{
+    .btn-icon-left span.icon-left {
         width: 43px;
         height: 43px;
         margin-left: -56px;
     }
 
-    .btn-icon-left{
+    .btn-icon-left {
         padding-left: 63px!important;
     }
 
@@ -157,11 +154,7 @@
         text-align: center;
     }
 
-    .container-texto-footer b {
-        justify-content: center;
-    }
-
-    .container-redes-footer{
+    .container-redes-footer {
         margin-top: 40px;
         margin-bottom: 50px;
         justify-content: center;
@@ -171,7 +164,7 @@
         padding: 40px;
     }
 
-    .modal-full .item-carrinho{
+    .modal-full .item-carrinho {
         padding-left: 0;
         padding-right: 0;
     }
@@ -185,7 +178,7 @@
         width: 50px;
     }
 
-    .modal-full .dados-produto{
+    .modal-full .dados-produto {
         padding-left: 15px;
         padding-right: 15px;
         display: grid;
@@ -202,4 +195,5 @@
     .modal-full .form-control {
         font-size: 16px;
     }
+
 }

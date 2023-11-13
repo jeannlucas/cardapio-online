@@ -1,18 +1,17 @@
 @font-face {
     font-family: 'PoppinsMedium';
-    src: url('/fonts/Poppins-Medium.otf');
+    src: url('../fonts/Poppins-Medium.otf');
 }
 
 @font-face {
     font-family: 'PoppinsRegular';
-    src: url('/fonts/Poppins-Regular.otf');
+    src: url('../fonts/Poppins-Regular.otf');
 }
-
 
 :root {
     --color-background: #fffdf7;
     --color-black: #212121;
-    --color-black-heavy: #000;
+    --color-black-heavy: #000000;
     --color-text: #4f4f4f;
     --color-text-out: #90908e;
     --color-primary: #ffbf00;
@@ -23,8 +22,8 @@
     --color-separate: #cccccc;
 }
 
-html,
-body {
+
+html, body {
     font-family: 'PoppinsRegular', 'Rubik', sans-serif;
     background-color: var(--color-background);
     color: var(--color-text);
@@ -35,7 +34,7 @@ b {
 }
 
 .hidden {
-    display: none !important;
+    display: none!important;
 }
 
 .color-primary {
@@ -47,22 +46,21 @@ a.navbar-brand {
 }
 
 .nav-link {
-    color: var(--color-black) !important;
-    padding-left: 35px !important;
-    padding-right: 35px !important;
+    color: var(--color-black)!important;
+    padding-left: 35px!important;
+    padding-right: 35px!important;
 }
 
 .btn-white {
     background-color: var(--color-white);
-    color: var(--color-black) !important;
+    color: var(--color-black)!important;
     border-radius: 20px;
     padding: 15px 25px;
     font-size: 20px;
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
 }
 
-.btn-white.active,
-.btn-white:hover {
+.btn-white.active, .btn-white:hover {
     background-color: var(--color-primary);
 }
 
@@ -108,11 +106,11 @@ a.navbar-brand {
 
 .btn-yellow {
     background-color: var(--color-primary);
-    color: var(--color-white) !important;
+    color: var(--color-white)!important;
     border-radius: 20px;
     padding: 15px 25px;
     font-size: 20px;
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
 }
 
 .btn-icon-left {
@@ -134,9 +132,9 @@ a.navbar-brand {
 }
 
 .btn-sm {
-    padding: 9px 15px !important;
-    border-radius: 15px !important;
-    font-size: 18px !important;
+    padding: 9px 15px!important;
+    border-radius: 15px!important;
+    font-size: 18px!important;
 }
 
 .btn-social {
@@ -164,8 +162,8 @@ a.navbar-brand {
     border-radius: 20px;
     padding: 15px 20px;
     font-size: 20px;
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
-    border: none !important;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1)!important;
+    border: none!important;
 }
 
 .card-case {
@@ -203,7 +201,7 @@ a.navbar-brand {
     margin-bottom: 30px;
 }
 
-.card-icon {
+.card-icon {   
     height: 150px;
     margin: 0 auto;
     margin-bottom: 30px;
@@ -331,9 +329,10 @@ a.navbar-brand {
 }
 
 .card-item:hover .price-produto {
-    color: var(--color-black-heavy) !important;
+    color: var(--color-black-heavy)!important;
     margin-top: 20px;
 }
+
 
 .depoimentos {
     padding-top: 100px;
@@ -406,7 +405,7 @@ a.navbar-brand {
 
 .texto-depoimento {
     display: flex;
-    font-size:  16px;
+    font-size: 16px;
     color: var(--color-black);
 }
 
@@ -432,7 +431,7 @@ a.navbar-brand {
     padding-bottom: 150px;
 }
 
-.card-secondary { 
+.card-secondary {
     background-color: var(--color-secondary);
     border-radius: 70px;
     padding: 90px;
@@ -449,7 +448,7 @@ a.navbar-brand {
 }
 
 .reserva .img-banner img {
-    width: 90%;
+    width: 100%;
 }
 
 footer {
@@ -460,7 +459,7 @@ footer {
     width: 150px;
 }
 
-.container-logo-footer, .container-texto-footer, .container-redes-footer{
+.container-logo-footer, .container-texto-footer, .container-redes-footer {
     display: flex;
     align-items: center;
 }
@@ -476,8 +475,6 @@ footer {
 .container-redes-footer {
     justify-content: end;
 }
-
-
 
 .modal-full {
     position: fixed;
@@ -504,29 +501,29 @@ footer {
     overflow-x: hidden;
 }
 
-.m-body::-webkit-scrollbar{
+.m-body::-webkit-scrollbar {
     width: 6px;
     background: transparent;
 }
 
-.m-body::-webkit-scrollbar-thumb{
+.m-body::-webkit-scrollbar-thumb {
     background: var(--color-white);
 }
 
-.m-body::-webkit-scrollbar-track{
+.m-body::-webkit-scrollbar-track {
     background: transparent;
 }
 
-.etapas{
+.etapas {
     display: flex;
 }
 
-.etapa{
+.etapa {
     width: 35px;
     height: 35px;
     background-color: var(--color-white);
     border-radius: 50px;
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
     color: var(--color-black);
     display: flex;
     justify-content: center;
@@ -534,7 +531,7 @@ footer {
     margin-right: 20px;
 }
 
-.etapa::before{
+.etapa::before {
     content: '';
     width: 20px;
     background-color: var(--color-separate);
@@ -547,7 +544,7 @@ footer {
     content: none;
 }
 
-.etapa.active, .etapa.active::before {
+.etapa.active, .etapa.active::before  {
     background-color: var(--color-primary);
 }
 
@@ -556,7 +553,7 @@ footer {
     color: var(--color-black);
 }
 
-.modal-full .item-carrinho{
+.modal-full .item-carrinho {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -565,11 +562,11 @@ footer {
     border-bottom: 1px solid var(--color-separate);
 }
 
-.modal-full .item-carrinho:last-child{
+.modal-full .item-carrinho:last-child {
     border-bottom: none;
 }
 
-.modal-full .img-produto img{
+.modal-full .img-produto img {
     width: 100px;
     border-radius: 11px;
 }
@@ -595,7 +592,7 @@ footer {
     padding-right: 25px;
 }
 
-.modal-full .add-carrinho{
+.modal-full .add-carrinho {
     display: flex;
     text-align: center;
     height: 30px;
@@ -615,40 +612,40 @@ footer {
 
 .container-total {
     padding-top: 20px;
-    border-top: 1px solid var(--color-separate)
+    border-top: 1px solid var(--color-separate);
 }
 
 .container-total .texto-entrega {
     color: var(--color-separate);
 }
 
-.container-total .texto-total{
+.container-total .texto-total {
     color: var(--color-black);
     font-size: 20px;
     margin-top: 10px;
 }
 
-.container-total .valor-total{
+.container-total .valor-total {
     color: var(--color-primary);
     font-size: 24px;
 }
 
 .form-control {
     background-color: var(--color-white);
-    color: var(--color-black) !important;
+    color: var(--color-black)!important;
     border-radius: 20px;
     padding: 15px 25px;
     font-size: 20px;
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
-    border: none !important;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1)!important;
+    border: none!important;
 }
 
-select.form-control{
-    height: 60px !important;
+select.form-control {
+    height: 60px!important;
 }
 
 .container-cep .form-control {
-    padding-left: 75px;
+    padding-right: 75px;
 }
 
 .container-cep .btn {
@@ -691,7 +688,7 @@ select.form-control{
 .img-map {
     width: 50px;
     height: 50px;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     color: var(--color-black);
     font-size: 22px;
     display: flex;
@@ -735,15 +732,15 @@ select.form-control{
     justify-content: center;
     align-items: center;
     font-size: 20px;
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-    color: var(--color-black-heavy) !important;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    color: var(--color-black-heavy)!important;
     border-radius: 50px;
     cursor: pointer;
     z-index: 1;
 }
 
-.container-mensagens{
-    position:fixed;
+.container-mensagens {
+    position: fixed;
     right: 20px;
     top: 20px;
     z-index: 9999;
@@ -769,12 +766,11 @@ select.form-control{
     margin: 0 auto;
     text-align: center;
     margin-top: 50px;
-
 }
 
 .carrinho-vazio i {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-color: var(--color-secondary);
     color: var(--color-primary);
     display: flex;

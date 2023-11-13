@@ -19,6 +19,7 @@ cardapio.eventos = {
     cardapio.metodos.carregarBotaoLigar();
     cardapio.metodos.carregaRedesSociaisBanner();
     cardapio.metodos.carregaRedesSociaisFooter();
+    cardapio.metodos.carregarBotaoReserva();
   },
 };
 
@@ -58,7 +59,7 @@ cardapio.metodos = {
     $("#menu-" + categoria).addClass("active");
   },
 
-  //clique botão vermais
+  //clique botão ver mais
   verMais: () => {
     var ativo = $(".container-menu a.active").attr("id").split("menu-")[1]; //menu-burgers
     cardapio.metodos.obterItensCardapio(ativo, true);
@@ -549,67 +550,61 @@ cardapio.metodos = {
 
 cardapio.templates = {
   item: `
-        <div class="col-12 col-lg-3 col-md-3 col-sm-6 md-5 animated fadeInUp">
-        <div class="card card-item \${id}">
-            <div class="img-produto">
-                <img
-                    src="\${img}"/>
-            </div>
-            <p class="title-produto text-center mt-4">
-                <b>\${nome}</b>
-            </p>
-            <p class="price-produto text-center">
-                <b>R$\${preco}</b>
-            </p>
-            <div class="add-carrinho">
-                <span class="btn-menos" onclick="cardapio.metodos.diminuirQuantidade('\${id}')"><i class="fas fa-minus"></i></span>
-                <span class="add-numero-itens" id="qntd-\${id}">0</span>
-                <span class="btn-mais" onclick="cardapio.metodos.aumentarQuantidade('\${id}')"><i class="fas fa-plus"></i></span>
-                <span class="btn btn-add" onclick="cardapio.metodos.adicionarAoCarrinho('\${id}')"><i class="fa fa-shopping-bag"></i></span>
+        <div class="col-12 col-lg-3 col-md-3 col-sm-6 mb-5 animated fadeInUp">
+            <div class="card card-item" id="\${id}">
+                <div class="img-produto">
+                    <img src="\${img}" />
+                </div>
+                <p class="title-produto text-center mt-4">
+                    <b>\${nome}</b>
+                </p>
+                <p class="price-produto text-center">
+                    <b>R$ \${preco}</b>
+                </p>
+                <div class="add-carrinho">
+                    <span class="btn-menos" onclick="cardapio.metodos.diminuirQuantidade('\${id}')"><i class="fas fa-minus"></i></span>
+                    <span class="add-numero-itens" id="qntd-\${id}">0</span>
+                    <span class="btn-mais" onclick="cardapio.metodos.aumentarQuantidade('\${id}')"><i class="fas fa-plus"></i></span>
+                    <span class="btn btn-add" onclick="cardapio.metodos.adicionarAoCarrinho('\${id}')"><i class="fa fa-shopping-bag"></i></span>
+                </div>
             </div>
         </div>
-    </div>
     `,
 
   itemCarrinho: `
-            <div class="col-12 item-carrinho">
-                <div class="img-produto">
-                    <img 
-                        src="\${img}"/>
-                </div>
-                <div class="dados-produto">
-                    <p class="title-produto text-center mt-4">
-                        <b>\${nome}</b>
-                    </p>
-                    <p class="price-produto text-center">
-                        <b>R$\${preco}</b>
-                    </p>
-                </div>
-                <div class="add-carrinho">
-                    <span class="btn-menos" onclick="cardapio.metodos.diminuirQuantidadeCarrinho('\${id}')"><i class="fas fa-minus"></i></span>
-                    <span class="add-numero-itens" id="qntd-carrinho-\${id}">\${qntd}</span>
-                    <span class="btn-mais" onclick="cardapio.metodos.aumentarQuantidadeCarrinho('\${id}')"><i class="fas fa-plus"></i></span>
-                    <span class="btn btn-remove no-mobile" onclick="cardapio.metodos.removerItemCarrinho('\${id}')"><i class="fas fa-times"></i></span>
-                </div>
-            </div>
-                `,
-
-  itemResumo: `
-            <div class="col-12 item-carrinho resumo">
-            <div class="img-produto-resumo">
-              <img
-                src="\${img}"
-              />
+        <div class="col-12 item-carrinho">
+            <div class="img-produto">
+                <img src="\${img}" />
             </div>
             <div class="dados-produto">
-              <p class="title-produto-resumo">
-                <b>\${nome}</b>
-              </p>
-              <p class="price-produto-resumo">
-                <b>R$ \${preco}</b>
-              </p>
+                <p class="title-produto"><b>\${nome}</b></p>
+                <p class="price-produto"><b>R$ \${preco}</b></p>
             </div>
-            <p class="quantidade-produto-resumo">x <b>\${qntd}</b></p>
-          </div>
-  `,
+            <div class="add-carrinho">
+                <span class="btn-menos" onclick="cardapio.metodos.diminuirQuantidadeCarrinho('\${id}')"><i class="fas fa-minus"></i></span>
+                <span class="add-numero-itens" id="qntd-carrinho-\${id}">\${qntd}</span>
+                <span class="btn-mais" onclick="cardapio.metodos.aumentarQuantidadeCarrinho('\${id}')"><i class="fas fa-plus"></i></span>
+                <span class="btn btn-remove no-mobile" onclick="cardapio.metodos.removerItemCarrinho('\${id}')"><i class="fa fa-times"></i></span>
+            </div>
+        </div>
+    `,
+
+  itemResumo: `
+        <div class="col-12 item-carrinho resumo">
+            <div class="img-produto-resumo">
+                <img src="\${img}" />
+            </div>
+            <div class="dados-produto">
+                <p class="title-produto-resumo">
+                    <b>\${nome}</b>
+                </p>
+                <p class="price-produto-resumo">
+                    <b>R$ \${preco}</b>
+                </p>
+            </div>
+            <p class="quantidade-produto-resumo">
+                x <b>\${qntd}</b>
+            </p>
+        </div>
+    `,
 };
